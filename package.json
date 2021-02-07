@@ -1,0 +1,20 @@
+{
+  "name": "matchingapp",
+  "version": "1.0.0",
+  "description": "matching app voor project tech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Matching-App"
+  },
+  "author": "Ashley Keuning",
+  "license": "ISC",
+  "dependencies": {
+    "camelcase": "^6.2.0",
+    "express": "^4.17.1"
+  }
+}
