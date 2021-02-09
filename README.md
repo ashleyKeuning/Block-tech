@@ -2,14 +2,22 @@
 
 Project name:
 
-description:
+about:
 
-Table of contents:
+table of contents:
+
+feature list:
+
+link naar wiki:
+
+license:
 
 installation(?):
 
 usage:
 
 contributing(?):
+
+code of conduct(?):
 
 credits:
