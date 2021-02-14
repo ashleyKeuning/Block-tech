@@ -2,9 +2,13 @@ console.log('hello world');
 
 const express = require('express');
 const app = express();
+const exphbs  = require('express-handlebars');
 const port = 3000;
 
 app.use(express.static('static/public'))
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
