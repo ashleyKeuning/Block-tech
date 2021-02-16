@@ -7,7 +7,7 @@ const exphbs  = require('express-handlebars');
 const port = 3000;
 
 //static files
-app.use(express.static('static/public'))
+app.use(express.static('public'))
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
