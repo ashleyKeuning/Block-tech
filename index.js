@@ -29,6 +29,10 @@ app.get('/recommendations', (req, res) => {
   res.render ('recommendations',{title:"Een lijst met accounts", accounts});
 });
 
+app.get('/user profile', (req, res) => {
+  res.render ('userprofile');
+});
+
 app.use (function (req, res, next) {
     res.status (404).send("no, this page is challas! ... sorry!")
     });
