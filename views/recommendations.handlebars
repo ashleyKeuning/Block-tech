@@ -1,10 +1,12 @@
 <h1>todays recommendations</h1>
 
 {{#each accounts}}
-  <div>
+  <div class='accounts'>
     <h2>{{name}}</h2>
     <p>{{age}}</p>
     <p>{{location}}</p>
+  <p><a href="/userprofile"{{accounts.id}}>"Meer info</a></p>
   </div>
+  
 {{/each}}
 
