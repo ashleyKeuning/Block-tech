@@ -9,12 +9,12 @@ An app that helps you find the best training partner nearby
 
 [link naar wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
 
-## feature list
+## Feature list
 
 The feature I worked is a daily recommendation
 
 
-## installation
+## Installation
 
 To use this app,you need to have 'node.js' and 'git' installed on your device.
 
@@ -22,13 +22,13 @@ To use this app,you need to have 'node.js' and 'git' installed on your device.
 npm install 
 ```
 
-## usage:
+## Ssage
 
-## contributing(?):
+## Contributing(?)
 
-## code of conduct(?):
+## Code of conduct(?)
 ## License
 
 [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
 
-## credits:
+## Credits
