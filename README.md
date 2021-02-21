@@ -1,23 +1,23 @@
-# Matching-App 
+# Matching-Application
 
-:sparkles:Fit-Together:sparkles:
+#:sparkles:Fit-Together:sparkles:
 
-about:
+## about:
 
-table of contents:
+## Wiki 
 
-feature list:
+[link naar wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
 
-link naar wiki:
+## feature list:
 
-license:
+## license:
 
-installation(?):
+## installation(?):
 
-usage:
+## usage:
 
-contributing(?):
+## contributing(?):
 
-code of conduct(?):
+## code of conduct(?):
 
-credits:
+## credits:
