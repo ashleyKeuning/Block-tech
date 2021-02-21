@@ -6,9 +6,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint *.js",
-    "lint":"eslint .",
-    "lint:fix":"eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -20,7 +19,8 @@
     "camelcase": "^6.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "uniq": "^1.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.15.1",
