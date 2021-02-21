@@ -7,7 +7,7 @@ An app that helps you find the best training partner nearby
 
 ## Wiki 
 
-[link naar wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+[link to the Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
 
 ## Feature list
 
