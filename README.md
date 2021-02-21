@@ -22,7 +22,7 @@ To use this app,you need to have 'node.js' and 'git' installed on your device.
 npm install 
 ```
 
-## Ssage
+## Usage
 
 ## Contributing(?)
 
