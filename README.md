@@ -1,6 +1,6 @@
-# Matching-App :sparkles:
+# Matching-App 
 
-Project name: 
+:sparkles:Fit-Together:sparkles:
 
 about:
 
