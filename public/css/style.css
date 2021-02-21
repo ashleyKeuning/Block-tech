@@ -4,22 +4,80 @@ body {
     background-repeat: no-repeat;
    background-attachment: fixed; 
    background-size: cover;
-  
+  margin:0 0 55px 0;
 
    }
+/*icons instelligen*/
+#instellingen{
+  float: right;
+  width:3em;
+  height:2em;
+  margin:0,5em;
+}
+#dumbell{
+    float: left;
+    width:4em;
+    height:2em;
+    margin:0,5em;
+  }
+/*navigatie onder*/
+  nav {display: flex;
+    background-color: #E86E61;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    height: 70px;
+    overflow-x: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20% 20% 0% 0%;
 
-   h1, h2{color:whitesmoke;}
+    }
+
+  #aanbevelingen, #berichten, #home, #profiel{
+    align-items: center;
+    width:2,5em;
+    height:2em;
+    margin:0.05em;
+    flex-grow: 1;
+    min-width:55px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding:1em;
+  }
+
+#profiel:hover{background-color: #E86E61;}
+#berichten:hover{background-color: #E86E61;}
+#home:hover{background-color: #E86E61;}
+#aanbevelingen:hover{background-color: #E86E61;}
+
+/**/
+
+   h1, h2{color:whitesmoke;
+   display: block;}
 p {
     color:white;
 }
 
-footer{background-color: cadetblue;} 
-
 div {display: flex;
-background-attachment: #222239;}
+background-color: #222239;
+}
 
-div.accounts{
+section.accounts{
     display: block;
+    background-color: whitesmoke;
+    border-radius: 20%;
+    margin:1em;
+}
+
+section.accounts >div > h1,h2,p{
+    color:black;
+}
+
+section > div{
+    margin:5em;
+    display:block;
+    background-color: whitesmoke;
 }
 
 /*div.bg {
