@@ -1,6 +1,6 @@
 # Matching-Application
 
-#:sparkles:Fit-Together:sparkles:
+# :sparkles:Fit-Together:sparkles:
 
 ## About
 An app that helps you find the best training partner nearby
