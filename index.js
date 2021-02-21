@@ -1,45 +1,63 @@
 console.log('hello world');
 
-//imports
+// Imports
 const express = require('express');
+
 const app = express();
-const exphbs  = require('express-handlebars');
+const exphbs = require('express-handlebars');
+
 const port = 3000;
 
-//test
+// Test
 const accounts = [
-  {name: "drake", age: "34", location: "4.5 km away"},
-  {name: "abel", age: "31", location: "5 km away"},
-  {name: "bryson", age: "28", location: "8 km away"}
+  {
+    id: 'acc1',
+    firstName: 'Aubrey',
+    lastName: 'Graham',
+    age: '34',
+    location: '4.5 km ',
+  },
 ];
-//static files
-app.use(express.static('public'))
+// Static files
+app.use(express.static('public'));
 
-//dynamic data
+// Dynamic data
 app.set('view engine', 'handlebars');
-app.engine('handlebars', exphbs({ 
-  defaultLayout: 'main',}));
+app.engine(
+  'handlebars',
+  exphbs({
+    defaultLayout: 'main',
+    layoutsDir: 'views/layouts',
+  })
+);
 
-
+// Homepagina(deze bestaat dan niet)
 app.get('/', (req, res) => {
-  res.render ('home');
+  res.render('...');
 });
 
+// Recommendations pagina (de feature)
 app.get('/recommendations', (req, res) => {
-  res.render ('recommendations',{title:"Een lijst met accounts", accounts});
+  res.render('recommendations', {
+    title: 'Een lijst met accounts',
+    accounts,
+  });
 });
 
-app.get('/user profile', (req, res) => {
-  res.render ('userprofile');
+/*
+ * Pagina om meer details van de profiel te kunnen zien
+ * (idk of het een nieuwe pagina wordt of een progressive disclosure gebeurende gaat worden)
+ * app.get('/userprofile', (req, res) => {
+ * res.render ('userprofile');
+ * });
+ */
+
+// Error pagina
+app.use((req, res, next) => {
+  res.status(404).send('no, this page is challas! ... sorry!');
 });
 
-app.use (function (req, res, next) {
-    res.status (404).send("no, this page is challas! ... sorry!")
-    });
-  
-//listen
+// Listen
 app.listen(3000, () => {
   console.log('Express web app on localhost:3000');
 });
-
-
