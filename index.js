@@ -12,12 +12,11 @@ const port = 3000;
 const accounts = [
   {
     id: 'acc1',
-    firstName: 'Aubrey',
-    lastName: 'Graham',
-    age: '34',
-    location: '4.5 km ',
-  },
-];
+    firstName: 'A',
+    lastName: 'G',
+    age: '20',
+    location: '4.5 km ',},
+
 // Static files
 app.use(express.static('public'));
 
@@ -28,7 +27,7 @@ app.engine(
   exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts',
-  })
+  }),
 );
 
 // Homepagina(deze bestaat dan niet)
