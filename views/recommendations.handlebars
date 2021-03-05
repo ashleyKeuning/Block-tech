@@ -3,12 +3,18 @@
 {{#each accounts}}
 <section class='accounts'>
   <div>
+    <img src="" alt="">
     <h1>{{firstName}}</h1>
     <h2>{{lastName}}</h2>
     <p>{{age}}</p>
     <p>{{location}}away</p>
-    <p><a href="/userprofile" {{#acc1}}>"Meer info</a></p>
+    <button class='toggle'>meer info</button>
   </div>
+
+  <div class="info">
+    <p>informatie van gebruiker</p>
+  </div>
+
 </section>
 
 {{/each}}

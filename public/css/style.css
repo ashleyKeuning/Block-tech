@@ -5,6 +5,7 @@ body {
    background-attachment: fixed; 
    background-size: cover;
   margin:0 0 55px 0;
+  font-family: avenir;
 
    }
 /*icons instelligen*/
@@ -12,13 +13,13 @@ body {
   float: right;
   width:3em;
   height:2em;
-  margin:0,5em;
+  margin:1em;
 }
 #dumbell{
     float: left;
     width:4em;
     height:2em;
-    margin:0,5em;
+    margin:1em;
   }
 /*navigatie onder*/
   nav {display: flex;
@@ -36,7 +37,7 @@ body {
 
   #aanbevelingen, #berichten, #home, #profiel{
     align-items: center;
-    width:2,5em;
+    width:2,3em;
     height:2em;
     margin:0.05em;
     flex-grow: 1;
@@ -53,10 +54,21 @@ body {
 
 /**/
 
-   h1, h2{color:whitesmoke;
-   display: block;}
+   h1{color:whitesmoke;
+   display: inline-block;
+  text-align: center;
+justify-content: center;
+margin:auto;
+text-transform: capitalize;
+font-size:40px;
+
+}
+
+
+
 p {
     color:white;
+
 }
 
 div {display: flex;
@@ -86,3 +98,12 @@ section > div{
     border-radius: 530% 0% 100% 70%;
     background-color: tomato;
 }*/
+
+
+.info{
+  display:none;
+
+}
+ .active{
+  display:block;
+}
