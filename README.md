@@ -13,7 +13,7 @@ Fit-Together is an app that helps you find the best training partner, you'll be 
 ## Features
 
 The feature I worked is a daily recommendation.
--
+
 find daily matches based on your prefrences and goals.
 
 
