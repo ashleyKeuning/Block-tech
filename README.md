@@ -6,15 +6,12 @@
 Fit-Together is an app that helps you find the best training partner, you'll be getting matched with people based on your preferences and goals, nearby.
 
 
+## How does it work
+
+
 ## Wiki 
 
 [Link to Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
-
-## Features
-
-The feature I worked is a daily recommendation.
-
-find daily matches based on your prefrences and goals.
 
 
 ## Installation
@@ -32,10 +29,15 @@ install the packages
 npm install 
 ```
 
+to run the server
+```bash
+npm start 
+```
+
 ## License
 
 [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
 
-##Author
+## Author
 
 The author of this app is [Ashley Keuning](https://github.com/ashleyKeuning) 
