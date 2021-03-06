@@ -3,23 +3,25 @@
 # :sparkles:Fit-Together:sparkles:
 
 ## About
-An app that helps you find the best training partner nearby
+Fit-Together is an app that helps you find the best training partner, you'll be getting matched with people based on your preferences and goals, nearby.
 
 
 ## Wiki 
 
-[link to the Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+[Link to Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
 
-## Feature 
+## Features
 
-The feature I worked is a daily recommendation
+The feature I worked is a daily recommendation.
+-
+find daily matches based on your prefrences and goals.
 
 
 ## Installation
 
 To use this app,you need to have 'node.js' and 'git' installed on your device.
 
-clone this repository 
+clone this repository to your local folder
 
 ```bash
 https://github.com/ashleyKeuning/Matching-App.git 
@@ -30,13 +32,10 @@ install the packages
 npm install 
 ```
 
-## Usage
-
-## Contributing(?)
-
-## Code of conduct(?)
 ## License
 
 [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
 
-## Credits
+##Author
+
+The author of this app is [Ashley Keuning](https://github.com/ashleyKeuning) 
