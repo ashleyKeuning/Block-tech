@@ -1,5 +1,5 @@
 ![fit together banner](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/Banner.png)
- # Matching-Application
+
 
   ## About
   Fit-Together is an app that helps you find the best training partner, you'll be getting matched with people based on your preferences and goals, nearby. 
@@ -25,11 +25,11 @@
 
   ## Wireframe
  These are the most important interaction omn the app and feature
- ## Feature list
+
 
  #### Begin scherm
  ![interface 1](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%201.png)
- The feature I worked is a daily recommendation
+
 
  #### aanbevelingen scherm
  ![interface 2](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%202.png)
