@@ -2,26 +2,33 @@ console.log('hello world');
 
 // Imports
 const express = require('express');
-const dotenv = require('dotenv').config();
 
-// tussen de curly brackets wordt het object
+// database
+const dotenv = require('dotenv').config();
 const { MongoClient } = require('mongodb');
+// tussen de curly brackets wordt het object
 
 const app = express();
 const exphbs = require('express-handlebars');
 
 const port = 3000;
 
-// static files
-const accounts = [
-  {
-    id: 'acc1',
-    firstName: 'naam',
-    lastName: 'achternaam',
-    age: '20',
-    location: '4.5 km',
-  },
-];
+// test voor database
+
+console.log(process.env.TESTVAR);
+
+/*
+ * static files
+ * const accounts = [
+ *   {
+ *     id: 'acc1',
+ *     firstName: 'naam',
+ *     lastName: 'achternaam',
+ *     age: '20',
+ *     location: '4.5 km',
+ *   },
+ * ];
+ */
 
 // saved profielen pagina
 const profielen = [
@@ -33,15 +40,8 @@ const profielen = [
     location: '4.5 km',
   },
 ];
-
-/*
- * database codes
- *  test voor database
- */
-console.log(process.env.TESTVAR);
-
 // Test
-const db = null;
+let db = null;
 // function conncectDB
 async function connectDB() {
   // get URI from .env file
@@ -56,7 +56,7 @@ async function connectDB() {
 connectDB()
   .then(() => {
     // if succesful connection is made show a message
-    console.log('there is a connection');
+    console.log('we have a connection to mongo!');
   })
   .catch((error) => {
     // if connection is unsuccesful, show errors
