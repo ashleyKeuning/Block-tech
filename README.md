@@ -17,7 +17,7 @@
 - filter ✏️
 - saving profiles:white_check_mark:
 - chatting:speech_balloon:
-- 
+
  ## Wireframe
 
 
