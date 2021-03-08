@@ -4,26 +4,66 @@ console.log('hello world');
 const express = require('express');
 const dotenv = require('dotenv').config();
 
+// tussen de curly brackets wordt het object
+const { MongoClient } = require('mongodb');
+
 const app = express();
 const exphbs = require('express-handlebars');
 
 const port = 3000;
 
-console.log(process.env.TESTVAR);
-// Test
+// static files
 const accounts = [
   {
     id: 'acc1',
-    firstName: 'naam',
+    firstName: ':naam',
     lastName: 'achternaam',
     age: '20',
     location: '4.5 km',
   },
 ];
 
+// saved profielen pagina
+const profielen = [
+  {
+    id: 'acc1',
+    firstName: ':naam',
+    lastName: 'achternaam',
+    age: '20',
+    location: '4.5 km',
+  },
+];
+
+/*
+ * database codes
+ *  test voor database
+ */
+console.log(process.env.TESTVAR);
+
+// Test
+const db = null;
+// function conncectDB
+async function connectDB() {
+  // get URI from .env file
+  const uri = process.env.DB_URI;
+  // make connection to database
+  const options = { useUnifiedTopology: true };
+  const client = new MongoClient(uri, options);
+  await client.connect();
+  db = await client.db(process.env.DB_NAME);
+}
+
+connectDB()
+  .then(() => {
+    // if succesful connection is made show a message
+    console.log('there is a connection');
+  })
+  .catch((error) => {
+    // if connection is unsuccesful, show errors
+    console.log(error);
+  });
 // Static files
 app.use(express.static('public'));
-
 // Dynamic data
 app.set('view engine', 'handlebars');
 app.engine(
@@ -35,8 +75,8 @@ app.engine(
 );
 
 // Homepagina(deze bestaat dan niet)
-app.get('/', (req, res) => {
-  res.render('...');
+app.get('', (req, res) => {
+  res.render('home');
 });
 
 // Recommendations pagina (de feature)
@@ -44,6 +84,13 @@ app.get('/recommendations', (req, res) => {
   res.render('recommendations', {
     title: 'Een lijst met accounts',
     accounts,
+  });
+});
+
+app.get('/savedprofiles', (req, res) => {
+  res.render('userprofile', {
+    title: 'opgeslagen accounts',
+    profielen,
   });
 });
 

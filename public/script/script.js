@@ -16,3 +16,4 @@ function toggleClass(e) {
 toggleButtons.forEach((button) => {
   button.addEventListener('click', toggleClass);
 });
+// met hulp van victor boucher

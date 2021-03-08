@@ -32,12 +32,11 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 20% 20% 0% 0%;
-
     }
 
   #aanbevelingen, #berichten, #home, #profiel{
     align-items: center;
-    width:2,3em;
+    width:1.8 em;
     height:2em;
     margin:0.05em;
     flex-grow: 1;
@@ -84,12 +83,19 @@ section.accounts{
 
 section.accounts >div > h1,h2,p{
     color:black;
+    
 }
 
 section > div{
     margin:5em;
     display:block;
     background-color: whitesmoke;
+}
+
+#likeknop{padding:1em;
+}
+
+#skipknop{padding:1em;
 }
 
 /*div.bg {
@@ -106,4 +112,29 @@ section > div{
 }
  .active{
   display:block;
+}
+
+/* saved profielen pagina  */
+section.profiel{
+  display: block;
+  background-color: whitesmoke;
+  border-radius: 20%;
+  margin:1em;
+}
+
+section.profiel >div > h1,h2,p{
+  color:black;
+  
+}
+
+section > div{
+  margin:5em;
+  display:block;
+  background-color: whitesmoke;
+}
+
+#likeknop{padding:1em;
+}
+
+#skipknop{padding:1em;
 }
