@@ -19,9 +19,17 @@
 - chatting:speech_balloon:
 
  ## Wireframe
+These are the most important interaction omn the app and feature
 
+#### Begin scherm
+![interface 1](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%201.png)
 
- ![wireframe](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/wireframe%20readme.png)
+#### aanbevelingen scherm
+![interface 2](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%202.png)
+
+#### opgeslagen profielen scherm
+![interface 3](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%203.png)
+
  
 
  ## Wiki 
