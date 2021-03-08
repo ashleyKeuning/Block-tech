@@ -12,16 +12,14 @@
  So you can make contact with this person later on.
 
  ## Wireframe
- ## Wiki 
+
 
  ![wireframe](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/wireframe%20readme.png)
- [link to the Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+ 
 
  ## Wiki 
- ## Feature list
-
  [Link to Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
- The feature I worked is a daily recommendation
+
 
 
  ## Installation
@@ -43,11 +41,7 @@
  ```bash
  npm start 
  ```
- ## Usage
 
- ## Contributing(?)
-
- ## Code of conduct(?)
  ## License
 
  [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
@@ -55,4 +49,4 @@
  ## Author
 
  The author of this app is [Ashley Keuning](https://github.com/ashleyKeuning) 
- ## Credits
+
