@@ -16,7 +16,7 @@ const port = 3000;
 const accounts = [
   {
     id: 'acc1',
-    firstName: ':naam',
+    firstName: 'naam',
     lastName: 'achternaam',
     age: '20',
     location: '4.5 km',
@@ -27,7 +27,7 @@ const accounts = [
 const profielen = [
   {
     id: 'acc1',
-    firstName: ':naam',
+    firstName: 'naam',
     lastName: 'achternaam',
     age: '20',
     location: '4.5 km',
@@ -91,6 +91,12 @@ app.get('/savedprofiles', (req, res) => {
   res.render('userprofile', {
     title: 'opgeslagen accounts',
     profielen,
+  });
+});
+
+app.get('/chat', (req, res) => {
+  res.render('chat', {
+    title: 'chats',
   });
 });
 
