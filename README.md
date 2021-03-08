@@ -5,7 +5,7 @@
   Fit-Together is an app that helps you find the best training partner, you'll be getting matched with people based on your preferences and goals, nearby. 
   To train together, whether it's in a gym or outside and help each with nutrition and planning. So the both of you can work, help and support each other on your goals
   An app that helps you find the best training partner nearby
- # :sparkles:Fit-Together:sparkles:
+
 
   ## How does it work
   the feature I worked on is the daily recommendations, this works as follows.
