@@ -11,6 +11,13 @@
  When you like a person, the app will save the profile on a list that you can find in the dumbell icon at the top left of your screen. 
  So you can make contact with this person later on.
 
+## feature list 
+
+- daily recommendations :memo:
+- filter ✏️
+- saving profiles:white_check_mark:
+- chatting:speech_balloon:
+- 
  ## Wireframe
 
 
@@ -41,6 +48,10 @@
  ```bash
  npm start 
  ```
+ 
+ and go to http://localhost:3000
+ 
+ you are now albe to use the app 
 
  ## License
 
