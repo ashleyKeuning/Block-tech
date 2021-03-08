@@ -1,5 +1,9 @@
+# node modules 
 node_modules/
+
+# Mac files 
 .DS_Store/
 
-.env/
-.env.test/
+# dotenv bestanden
+.env
+.env.test

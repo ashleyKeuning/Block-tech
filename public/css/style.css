@@ -8,6 +8,8 @@ body {
   font-family: avenir;
 
    }
+   a{text-decoration: none;}
+   
 /*icons instelligen*/
 #instellingen{
   float: right;
@@ -36,7 +38,7 @@ body {
 
   #aanbevelingen, #berichten, #home, #profiel{
     align-items: center;
-    width:1.8 em;
+    width:1.5 em;
     height:2em;
     margin:0.05em;
     flex-grow: 1;
@@ -53,57 +55,83 @@ body {
 
 /**/
 
-   h1{color:whitesmoke;
+   h1{color:white;
    display: inline-block;
-  text-align: center;
-justify-content: center;
-margin:auto;
 text-transform: capitalize;
 font-size:40px;
+text-align: center;
 
 }
 
-
-
-p {
-    color:white;
-
-}
-
-div {display: flex;
-background-color: #222239;
-}
+/* aanbevelingen pagina */
 
 section.accounts{
-    display: block;
-    background-color: whitesmoke;
-    border-radius: 20%;
-    margin:1em;
+  display: block;
+  background-color: whitesmoke;
+  border-radius: 20%;
+  margin:1em 1em 5em 1em;
+  padding:1em 0em 0em 0em;
 }
 
-section.accounts >div > h1,h2,p{
-    color:black;
-    
+section.accounts >div > h2{
+  color:black;
+  text-transform: capitalize;
+}
+section.accounts>div>h1{
+color:black;
+  display: inline-block;
+text-transform: capitalize;
+font-size:40px;
+margin: 0em;
+padding:0em 3em 0em 0em;}
+
+section.accounts >div:nth-of-type(1){
+  display: block;
+margin: auto;
+padding:0em 2em;
+border-radius: 40%;
+
+}
+/* like en skip knop */
+section.accounts >div:nth-of-type(3){
+  display: flex;
+  align-items: center;
+margin:0.5em auto;
+justify-content: center;
+border-radius: 40%;
+}
+div.accounts{
+    margin:2em 2em 1em 2em;
 }
 
-section > div{
-    margin:5em;
-    display:block;
-    background-color: whitesmoke;
+div.accounts> h1,  h2, p{
+  color:black;
+  padding:0em;
+  display: block;
+  margin:0em;
+ text-align: left;
 }
 
-#likeknop{padding:1em;
+#likeknop{padding:1.5em;
 }
 
-#skipknop{padding:1em;
+#skipknop{padding:1.5em;
 }
 
-/*div.bg {
-    width: 100px;
-    height: 100px;
-    border-radius: 530% 0% 100% 70%;
-    background-color: tomato;
-}*/
+
+button.toggle{ background-color:  #E86E61;
+  border: none;
+  border-radius: 40%;
+  color: white;
+  padding: 0.5em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+ justify-content: center;
+ margin: 1em auto ;
+ display: block;
+ text-decoration: none;}
 
 
 .info{
@@ -119,22 +147,78 @@ section.profiel{
   display: block;
   background-color: whitesmoke;
   border-radius: 20%;
-  margin:1em;
+  margin:1em 1em 5em 1em;
+  padding:1em 0em ;
 }
 
 section.profiel >div > h1,h2,p{
   color:black;
+  color:black;
+  padding:0em;
+  display: block;
+  margin:0em;
+ text-align: left;
+}
   
+section.profiel > div{
+  display: block;
+  margin: auto;
+  padding:0em 2em;
+  border-radius: 40%;
 }
 
-section > div{
-  margin:5em;
-  display:block;
+
+button.profiel{ background-color:  #E86E61;
+  border: none;
+  border-radius: 35%;
+  color: white;
+  padding: 1em 1.2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+ justify-content: center;
+ margin: 1em auto ;
+ display: block;
+ text-decoration: none;}
+
+/* home pagina */
+section.home{
+  display: block;
   background-color: whitesmoke;
+  border-radius: 20%;
+  margin:1em;
+  position: absolute;
+  top:5em;
 }
 
-#likeknop{padding:1em;
+ h1.home{
+  color:black;
+  padding:0.5em;
 }
 
-#skipknop{padding:1em;
+h2.home{
+  color:black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding:0em;
+  display: block;
+}
+
+button.home{
+ background-color:  #E86E61;
+ border: none;
+ border-radius: 40%;
+ color: white;
+ padding: 1em 2em;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 20px;
+justify-content: center;
+margin: 2em auto;
+display: block;
+text-decoration: none;
+
 }
