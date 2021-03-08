@@ -1,4 +1,4 @@
-# :sparkles:Fit-Together:sparkles:
+![fit together banner](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/Banner.png)
 
  ## About
  Fit-Together is an app that helps you find the best training partner, you'll be getting matched with people based on your preferences and goals, nearby. 
