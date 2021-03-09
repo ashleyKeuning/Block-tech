@@ -36,7 +36,7 @@
  ![interface 3](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%203.png)
  
   ## Wiki 
-  [Link to Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+ See the [Wiki](https://github.com/ashleyKeuning/Matching-App/wiki) for more information about the app
 
 ## Installation
 
