@@ -93,7 +93,7 @@ app.get('/recommendations', async (req, res) => {
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
     if (err) {
       console.log(err);
-    } else {
+    } else if (likesObject.likes) {
       profileCollection
         .find({ _id: { $nin: likesObject.likes } })
         .toArray((err, users) => {
@@ -106,6 +106,17 @@ app.get('/recommendations', async (req, res) => {
             });
           }
         });
+    } else {
+      profileCollection.find({}).toArray((err, users) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.render('recommendations', {
+            title: 'Een lijst met accounts',
+            users,
+          });
+        }
+      });
     }
   });
 });
@@ -116,7 +127,7 @@ app.get('/savedprofiles', async (req, res) => {
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
     if (err) {
       console.log(err);
-    } else {
+    } else if (likesObject.likes) {
       profileCollection
         .find({ _id: { $in: likesObject.likes } })
         .toArray((err, users) => {
@@ -129,6 +140,10 @@ app.get('/savedprofiles', async (req, res) => {
             });
           }
         });
+    } else {
+      res.render('userprofile', {
+        title: 'opgeslagen accounts',
+      });
     }
   });
 });
