@@ -19,7 +19,7 @@
  - filter ✏️
  - saving profiles:white_check_mark:
  - chatting:speech_balloon:
- [link to the Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+
 
   ## Wireframe
  These are the most important interaction omn the app and feature
