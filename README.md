@@ -62,6 +62,24 @@
 
   you are now albe to use the app 
 
+## database
+
+create a database with:
+
+Database name is profielen
+
+Collection Name is profiel and likes
+
+and add [this Json](https://github.com/ashleyKeuning/Matching-App/blob/main/profielen.json) file to the database
+
+## .env 
+Create a .env in your matching-app dictionary via your text editor and paste the following code in the .env file
+``` bash
+mongodb+srv://ashley:<password>@cluster0.le4yq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority 
+```
+enter your password inside the <> and replace "myFirstDatabase with the database name "profielen"
+
+
   ## License
 
   [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
