@@ -1,9 +1,38 @@
 [
     {
-        "id": "acc1",
-        "firstName": ":naam",
-        "lastName": "achternaam",
+        "firstName": "Tom",
+        "lastName": "de Haan ",
+        "age": "34",
+        "location": "4.5 km",
+        "meerInformatie": "meer informatie over tom"
+    },
+    {
+        "userImage": "/images/girl.jpg",
+        "firstName": "Anna",
+        "lastName": "van den Oever",
         "age": "20",
-        "location": "4.5 km"
+        "location": "5 km",
+        "meerInformatie": "meer informatie over anna"
+    },
+    {
+        "firstName": "Loes",
+        "lastName": "Visser",
+        "age": "18",
+        "location": "5 km",
+        "meerInformatie": "meer informatie over loes"
+    },
+    {
+        "firstName": "Dean",
+        "lastName": "Schuurman",
+        "age": "25",
+        "location": "0.5 km",
+        "meerInformatie": "meer informatie over dean"
+    },
+    {
+        "firstName": "Hans",
+        "lastName": "de Boer",
+        "age": "20",
+        "location": "1 km",
+        "meerInformatie": "meer informatie over hans"
     }
 ]
