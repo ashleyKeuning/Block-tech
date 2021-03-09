@@ -1,149 +1,26 @@
 <h1>todays recommendations</h1>
-{{#each accounts}}
+{{#each users}}
 <section class='accounts'>
   <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
+    <img class='accounts' src="/images/girl.jpg" alt="">
+    <h1>{{firstName}} {{lastName}}</h1>
+    <p>{{age}} years</p>
+    <p>{{location}} away</p>
+
 
     <button class='toggle'>meer info</button>
   </div>
 
   <div class="info">
-    <p>informatie van gebruiker</p>
+    <p>{{meerInformatie}}</p>
   </div>
 
   <div>
     <a href=''><img id="skipknop" src="images/skipknop.png"></a>
     <a href=""><img id="likeknop" src="images/likeknop.png"></a>
-  </div>
-
-</section>
-
-{{/each}}
-
-
-{{#each accounts}}
-<section class='accounts'>
-  <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
-
-    <button class='toggle'>meer info</button>
-  </div>
-
-  <div class="info">
-    <p>informatie van gebruiker</p>
-  </div>
-
-  <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
-  </div>
-
-</section>
-
-{{/each}}
-
-{{#each accounts}}
-<section class='accounts'>
-  <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
-
-    <button class='toggle'>meer info</button>
-  </div>
-
-  <div class="info">
-    <p>informatie van gebruiker</p>
-  </div>
-
-  <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
-  </div>
-
-</section>
-
-{{/each}}
-
-{{#each accounts}}
-<section class='accounts'>
-  <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
-
-    <button class='toggle'>meer info</button>
-  </div>
-
-  <div class="info">
-    <p>informatie van gebruiker</p>
-  </div>
-
-  <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
-  </div>
-
-</section>
-
-{{/each}}
-
-{{#each accounts}}
-<section class='accounts'>
-  <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
-
-    <button class='toggle'>meer info</button>
-  </div>
-
-  <div class="info">
-    <p>informatie van gebruiker</p>
-  </div>
-
-  <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
-  </div>
-
-</section>
-
-{{/each}}
-
-{{#each accounts}}
-<section class='accounts'>
-  <div>
-    <img src="" alt="">
-    <h1>{{firstName}}</h1>
-    <h2>{{lastName}}</h2>
-    <p>{{age}}</p>
-    <p>{{location}}away</p>
-
-    <button class='toggle'>meer info</button>
-  </div>
-
-  <div class="info">
-    <p>informatie van gebruiker</p>
-  </div>
-
-  <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
+    <form action="/likeuser" method="POST">
+      <button type="submit" name="userid" value={{_id}}>Like</button>
+    </form>
   </div>
 
 </section>

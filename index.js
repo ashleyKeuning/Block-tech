@@ -1,11 +1,12 @@
-console.log('hello world');
-
 // Imports
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // database
 const dotenv = require('dotenv').config();
 const { MongoClient } = require('mongodb');
+const { ObjectID } = require('mongodb');
+
 // tussen de curly brackets wordt het object
 
 const app = express();
@@ -33,15 +34,18 @@ console.log(process.env.TESTVAR);
 // saved profielen pagina
 const profielen = [
   {
-    id: 'acc1',
-    firstName: 'naam',
-    lastName: 'achternaam',
-    age: '20',
-    location: '4.5 km',
+    id: '',
+    firstName: '',
+    lastName: '',
+    age: '',
+    location: '',
   },
 ];
-// Test
+
 let db = null;
+let likesCollection = null;
+let profileCollection = null;
+
 // function conncectDB
 async function connectDB() {
   // get URI from .env file
@@ -51,6 +55,8 @@ async function connectDB() {
   const client = new MongoClient(uri, options);
   await client.connect();
   db = await client.db(process.env.DB_NAME);
+  likesCollection = await db.collection('likes');
+  profileCollection = await db.collection('profiel');
 }
 
 connectDB()
@@ -73,6 +79,7 @@ app.engine(
     layoutsDir: 'views/layouts',
   }),
 );
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Homepagina(deze bestaat dan niet)
 app.get('', (req, res) => {
@@ -80,23 +87,94 @@ app.get('', (req, res) => {
 });
 
 // Recommendations pagina (de feature)
-app.get('/recommendations', (req, res) => {
-  res.render('recommendations', {
-    title: 'Een lijst met accounts',
-    accounts,
+app.get('/recommendations', async (req, res) => {
+  const objectID = new ObjectID('6047593aa3d526e78d805086');
+
+  likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
+    if (err) {
+      console.log(err);
+    } else {
+      profileCollection
+        .find({ _id: { $nin: likesObject.likes } })
+        .toArray((err, users) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render('recommendations', {
+              title: 'Een lijst met accounts',
+              users,
+            });
+          }
+        });
+    }
   });
 });
 
-app.get('/savedprofiles', (req, res) => {
-  res.render('userprofile', {
-    title: 'opgeslagen accounts',
-    profielen,
+app.get('/savedprofiles', async (req, res) => {
+  const objectID = new ObjectID('6047593aa3d526e78d805086');
+
+  likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
+    if (err) {
+      console.log(err);
+    } else {
+      profileCollection
+        .find({ _id: { $in: likesObject.likes } })
+        .toArray((err, users) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render('userprofile', {
+              title: 'opgeslagen accounts',
+              users,
+            });
+          }
+        });
+    }
   });
 });
 
 app.get('/chat', (req, res) => {
   res.render('chat', {
     title: 'chats',
+  });
+});
+
+app.post('/likeuser', async (req, res) => {
+  const objectID = new ObjectID('6047593aa3d526e78d805086');
+  const likedUser = new ObjectID(req.body.userid);
+
+  await likesCollection.update(
+    { _id: objectID },
+    { $push: { likes: likedUser } },
+  );
+
+  likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
+    if (err) {
+      console.log(err);
+    } else {
+      profileCollection
+        .find({ _id: { $in: likesObject.likes } })
+        .toArray((err, users) => {
+          if (err) {
+            console.log(err);
+          } else {
+            res.render('userprofile', {
+              title: 'opgeslagen accounts',
+              users,
+            });
+          }
+        });
+
+      profileCollection
+        .find({ _id: { $nin: likesObject.likes } })
+        .toArray((err, users) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log(users);
+          }
+        });
+    }
   });
 });
 
