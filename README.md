@@ -12,8 +12,6 @@
   Every day you will receive between 5 and 10 recommendations of people based on your preferences and goals. You can either skip or like these people.
   When you like a person, the app will save the profile on a list that you can find in the dumbell icon at the top left of your screen. 
   So you can make contact with this person later on.
- ## About
- An app that helps you find the best training partner nearby
 
  ## feature list 
 
