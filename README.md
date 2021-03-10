@@ -87,7 +87,7 @@ enter your password inside the <> and replace "myFirstDatabase with the database
   ## Author
 
   The author of this app is [Ashley Keuning](https://github.com/ashleyKeuning) 
- [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
+
 
 ## credits 
 Victor Boucher
