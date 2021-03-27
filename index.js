@@ -1,13 +1,20 @@
-// Imports
+// Imports > het haalt de gegevens, informatie op van de package
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// database
+/*
+ * bodyparrser is voor de userinput
+ *  imports van de database
+ */
+
 const dotenv = require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const { ObjectID } = require('mongodb');
 
-// tussen de curly brackets wordt het object
+/*
+ * opbject id is de id van de database
+ *  tussen de curly brackets wordt het object
+ */
 
 const app = express();
 const exphbs = require('express-handlebars');
@@ -17,34 +24,12 @@ const port = 3000;
 // test voor database
 
 console.log(process.env.TESTVAR);
-
-/*
- * static files
- * const accounts = [
- *   {
- *     id: 'acc1',
- *     firstName: 'naam',
- *     lastName: 'achternaam',
- *     age: '20',
- *     location: '4.5 km',
- *   },
- * ];
- */
-
-// saved profielen pagina
-const profielen = [
-  {
-    id: '',
-    firstName: '',
-    lastName: '',
-    age: '',
-    location: '',
-  },
-];
+// om de connectie met de database te testen
 
 let db = null;
 let likesCollection = null;
 let profileCollection = null;
+// nul is een lege string of een niet bestaande waarde
 
 // function conncectDB
 async function connectDB() {
@@ -59,6 +44,10 @@ async function connectDB() {
   profileCollection = await db.collection('profiel');
 }
 
+/*
+ * async werkt samen met await, de database moet eerst geladen
+ * worden voordat het de volgende code uitvoert
+ */
 connectDB()
   .then(() => {
     // if succesful connection is made show a message
@@ -77,26 +66,36 @@ app.engine(
   exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts',
-  }),
+  })
 );
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Homepagina(deze bestaat dan niet)
+// Homepagina
 app.get('', (req, res) => {
   res.render('home');
 });
 
-// Recommendations pagina (de feature)
+// Recommendations pagina (de feature) // het halen/krijgen van informatie
 app.get('/recommendations', async (req, res) => {
+  // de functie voor de like option
   const objectID = new ObjectID('6047593aa3d526e78d805086');
 
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
+    /*
+     * dit
+     * likes collection is een collection in de database, het zoek de id van de object id in de regel hierboven
+     */
     if (err) {
-      console.log(err);
-    } else {
-      profileCollection
-        .find({ _id: { $nin: likesObject.likes } })
+      console.log(err); // als er een error dan showt het een error
+    } else if (likesObject.likes) {
+      /*
+       * wanneer de gebruiker een profiel geliked
+       *  wordt dan wordt die zelfde profiel van de pagina verwijdert
+       */
+      profileCollection // in de profile collection wordt die profiel verwijdert
+        .find({ _id: { $nin: likesObject.likes } }) // nin = not in array //find id uit de database
         .toArray((err, users) => {
+          // add de gelikede profielen worden in een array geplaatst en in de collectie van likes.
           if (err) {
             console.log(err);
           } else {
@@ -106,29 +105,82 @@ app.get('/recommendations', async (req, res) => {
             });
           }
         });
+    } else {
+      // anders wordt het aan een array toegevoed
+      profileCollection.find({}).toArray((err, users) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.render('recommendations', {
+            title: 'Een lijst met accounts',
+            users,
+          });
+        }
+      });
     }
   });
 });
 
+/*
+ * profielen deleten
+ * app.post('/recommendations', async (req, res) => {
+ *   const likedUser = new ObjectID(req.body.userid2); // is de button van de like button
+ */
+
+/*
+ *   await likesCollection.update(
+ *     { _id: userid2 },
+ *     {
+ *       $pull: { likes: likedUser },
+ *     },
+ *     (error, data) => {
+ *       if (error) {
+ *         console.log(error);
+ *       } else {
+ *         console.log(userid2, req.body.userid2);
+ *       }
+ *     }
+ *   );
+ *   await likesCollection
+ *     .findOne({ _id: userid2 })
+ */
+
+/*
+ * .then(user => {
+ *   //Fill session with user data
+ *   req.session.user = user
+ * })
+ */
+/*
+ *     .catch((err) => console.log(err));
+ *   res.redirect('/recommendations');
+ * });
+ * dit is de pagina voor saved profiles
+ */
 app.get('/savedprofiles', async (req, res) => {
   const objectID = new ObjectID('6047593aa3d526e78d805086');
-
+  // object van de eerste id
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
     if (err) {
       console.log(err);
-    } else {
+    } else if (likesObject.likes) {
       profileCollection
-        .find({ _id: { $in: likesObject.likes } })
+        .find({ _id: { $in: likesObject.likes } }) // wanneer er een profiel wordt geliked
+        // wordt deze in de saved profiles pagina bewaard
         .toArray((err, users) => {
           if (err) {
             console.log(err);
           } else {
-            res.render('userprofile', {
+            res.render('recommendations', {
               title: 'opgeslagen accounts',
               users,
             });
           }
         });
+    } else {
+      res.render('recommendations', {
+        title: 'opgeslagen accounts',
+      });
     }
   });
 });
@@ -139,13 +191,18 @@ app.get('/chat', (req, res) => {
   });
 });
 
+// het submitten van de button
 app.post('/likeuser', async (req, res) => {
   const objectID = new ObjectID('6047593aa3d526e78d805086');
-  const likedUser = new ObjectID(req.body.userid);
+  const likedUser = new ObjectID(req.body.userid); // is de button van de like button
 
   await likesCollection.update(
+    /*
+     * het update de database, door de push, door het te pushen wordt er er een
+     *  object in de array gezet in de likes profile
+     */
     { _id: objectID },
-    { $push: { likes: likedUser } },
+    { $addToSet: { likes: likedUser } } // push is om meer objecten in de array.
   );
 
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
@@ -153,18 +210,19 @@ app.post('/likeuser', async (req, res) => {
       console.log(err);
     } else {
       profileCollection
-        .find({ _id: { $in: likesObject.likes } })
+        .find({ _id: { $in: likesObject.likes } }) // de collectie likes komen in de pagina van de savedprofiles
         .toArray((err, users) => {
           if (err) {
             console.log(err);
           } else {
-            res.render('userprofile', {
-              title: 'opgeslagen accounts',
-              users,
-            });
+            res.redirect('/recommendations');
           }
         });
 
+      /*
+       * als het in de savedprofile pagina staat, of in de likes collectie
+       * wordt het verwijdert ui te de recommendation pagina
+       */
       profileCollection
         .find({ _id: { $nin: likesObject.likes } })
         .toArray((err, users) => {
@@ -178,20 +236,14 @@ app.post('/likeuser', async (req, res) => {
   });
 });
 
-/*
- * Pagina om meer details van de profiel te kunnen zien
- * (idk of het een nieuwe pagina wordt of een progressive disclosure gebeurende gaat worden)
- * app.get('/userprofile', (req, res) => {
- * res.render ('userprofile');
- * });
- */
-
 // Error pagina
 app.use((req, res, next) => {
-  res.status(404).send('no, this page is challas! ... sorry!');
+  res.status(404).send('This page does not exsist! ... sorry!');
 });
 
 // Listen
 app.listen(3000, () => {
   console.log('Express web app on localhost:3000');
 });
+
+// const is een arrow function

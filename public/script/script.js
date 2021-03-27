@@ -16,4 +16,15 @@ function toggleClass(e) {
 toggleButtons.forEach((button) => {
   button.addEventListener('click', toggleClass);
 });
-// met hulp van victor boucher
+
+// 2de toggle
+const toggleButton = document.getElementsByClassName('skipButtonToggle')[0];
+const account = document.getElementsByClassName('accounts')[0];
+
+function hiding(e) {
+  account.classList.toggle('active2');
+  console.log('geklikt');
+}
+
+toggleButton.addEventListener('click', hide);
+console.log('geklik');

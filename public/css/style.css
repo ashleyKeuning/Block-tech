@@ -1,52 +1,52 @@
 body {
-    background-image: url("/images/bgshape.png");
-    background-color: #222239;
-    background-repeat: no-repeat;
-   background-attachment: fixed; 
-   background-size: cover;
-  margin:0 0 55px 0;
-  font-family: avenir;
+  background-image: url("/images/bgshape.png");
+  background-color: #222239;
+  background-repeat: no-repeat;
+ background-attachment: fixed; 
+ background-size: cover;
+margin:0 0 55px 0;
+font-family: avenir;
 
-   }
-   a{text-decoration: none;}
-   
+ }
+ a{text-decoration: none;}
+ 
 /*icons instelligen*/
 #instellingen{
-  float: right;
-  width:3em;
+float: right;
+width:3em;
+height:2em;
+margin:1em;
+}
+#dumbell{
+  float: left;
+  width:4em;
   height:2em;
   margin:1em;
 }
-#dumbell{
-    float: left;
-    width:4em;
-    height:2em;
-    margin:1em;
-  }
 /*navigatie onder*/
-  nav {display: flex;
-    background-color: #E86E61;
-    position: fixed;
-    bottom:0;
-    width: 100%;
-    height: 70px;
-    overflow-x: auto;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20% 20% 0% 0%;
-    }
-
-  #aanbevelingen, #berichten, #home, #profiel{
-    align-items: center;
-    width:1.5 em;
-    height:2em;
-    margin:0.05em;
-    flex-grow: 1;
-    min-width:55px;
-    overflow: hidden;
-    white-space: nowrap;
-    padding:1em;
+nav {display: flex;
+  background-color: #E86E61;
+  position: fixed;
+  bottom:0;
+  width: 100%;
+  height: 70px;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20% 20% 0% 0%;
   }
+
+#aanbevelingen, #berichten, #home, #profiel{
+  align-items: center;
+  width:1.5 em;
+  height:2em;
+  margin:0.05em;
+  flex-grow: 1;
+  min-width:55px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding:1em;
+}
 
 #profiel:hover{background-color: #E86E61;}
 #berichten:hover{background-color: #E86E61;}
@@ -55,8 +55,8 @@ body {
 
 /**/
 
-   h1{color:white;
-   display: inline-block;
+ h1{color:white;
+ display: inline-block;
 text-transform: capitalize;
 font-size:40px;
 text-align: center;
@@ -66,62 +66,89 @@ text-align: center;
 /* aanbevelingen pagina */
 
 section.accounts{
-  display: block;
-  background-color: whitesmoke;
-  border-radius: 20%;
-  margin:1em;
-  padding:1em 0em 0em 0em;
+display: block;
+background-color: whitesmoke;
+border-radius: 12%;
+margin:1em;
+padding:1em 0em 0em 0em;
+}
+
+section .active2{
+  display:none;
+  background-color: blue;
+    border:none;
+    background-color: whitesmoke;
+    border-radius: 10%;
+
 }
 
 section.accounts>div>h1{
 color:black;
-  display: inline-block;
+display: inline-block;
 text-transform: capitalize;
 font-size:25px;
 margin: 0em;
 padding:0em 0.5em 0em 0em;}
 
 section.accounts >div:nth-of-type(1){
-  display: block;
+display: block;
 margin: auto;
 padding:0em 2em;
-border-radius: 40%;
+border-radius: 20%;
 
 }
 /* like en skip knop */
 section.accounts >div:nth-of-type(3){
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 margin:0em auto;
 justify-content: center;
-border-radius: 40%;
+
 }
 div.accounts{
-    margin:2em 2em 1em 2em;
+  margin:2em 2em 1em 2em;
 }
 
 div.accounts> h1,  h2, p{
-  color:black;
-  padding:0em;
-  display: block;
-  margin:0em;
- text-align: left;
+color:black;
+padding:0em;
+display: block;
+margin:0em;
+text-align: left;
 }
 
 img.accounts {width:8em;
-  height:8em;
-  display:block;
-  margin:0em auto 0.5em;
+height:8em;
+display:block;
+margin:0em auto 0.5em;
 
 }
 
 
 
-#likeknop{padding:1.5em;
+button.likebutton{margin:1.5em;
+  border:none;
+  background-color: whitesmoke;
+  border-radius: 50%;
+
 }
 
-#skipknop{padding:1.5em;
+button.likebutton>img:hover{
+  width: 100px;
+  height:100px;
 }
+
+button.skipButtonToggle{margin:1.5em;
+  border:none;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+button.skipbutton>img:hover{
+  width: 100px;
+  height:100px;
+}
+
 
 section.accounts >div:nth-of-type(2)>p{
 margin:0.5em 2em;
@@ -129,103 +156,112 @@ margin:0.5em 2em;
 }
 
 
-button.toggle{ background-color:  #E86E61;
-  border: none;
-  border-radius: 40%;
-  color: white;
-  padding: 0.5em 0.8em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
- justify-content: center;
- margin: 1em auto 0em;
- display: block;
- text-decoration: none;}
+button.toggle{ color:white;
+  background-color:rgb(68,66,106);
+border: none;
+border-radius: 10%;
+padding: 0.5em 0.8em;
+text-align: center;
+text-decoration:none;
+display: inline-block;
+font-size: 10px;
+justify-content: center;
+margin: 1em auto 0em;
+display: block;
+}
+
+
+button.toggle:hover{
+  font-size: 12px;
+}
 
 
 .info{
-  display:none;
+display:none;
 
 }
- .active{
-  display:block;
+.active{
+display:block;
 }
 
 /* saved profielen pagina  */
 section.profiel{
-  display: block;
-  background-color: whitesmoke;
-  border-radius: 20%;
-  margin:1em 1em 5em 1em;
-  padding:1em 0em ;
+display: block;
+background-color: whitesmoke;
+border-radius: 12%;
+margin:1em 1em 5em 1em;
+padding:1em 0em ;
 }
 
 section.profiel >div > h1,h2,p{
-  color:black;
-  color:black;
-  padding:0em;
-  display: block;
-  margin:0em;
- text-align: left;
+color:black;
+color:black;
+padding:0em;
+display: block;
+margin:0em;
+text-align: left;
 }
-  
+
 section.profiel > div{
-  display: block;
-  margin: auto;
-  padding:0em 2em;
-  border-radius: 40%;
+display: block;
+margin: auto;
+padding:0em 2em;
+border-radius: 40%;
 }
 
 
 button.profiel{ background-color:  #E86E61;
-  border: none;
-  border-radius: 35%;
-  color: white;
-  padding: 1em 1.2em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 15px;
- justify-content: center;
- margin: 1em auto ;
- display: block;
- text-decoration: none;}
+border: none;
+border-radius: 10%;
+color: white;
+padding: 0.8em 1em;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+justify-content: center;
+margin: 1em auto ;
+display: block;
+text-decoration: none;}
 
+button.profiel:hover{
+  font-size: 17px;
+
+}
 /* home pagina */
 section.home{
-  display: block;
-  background-color: whitesmoke;
-  border-radius: 20%;
-  margin:1em;
-  position: absolute;
-  top:5em;
+display: block;
+background-color: whitesmoke;
+border-radius: 20%;
+margin:1em;
+position: absolute;
+top:5em;
 }
 
- h1.home{
-  color:black;
-  padding:0.5em;
+h1.home{
+color:black;
+padding:0.5em;
 }
 
 h2.home{
-  color:black;
-  text-align: center;
-  text-decoration: none;
-  text-transform: capitalize;
-  padding:0em;
-  display: block;
+color:black;
+text-align: center;
+text-decoration: none;
+text-transform: capitalize;
+padding:0em;
+display: block;
 }
 
 button.home{
- background-color:  #E86E61;
- border: none;
- border-radius: 40%;
- color: white;
- padding: 1em 2em;
- text-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 20px;
+background-color:  #E86E61;
+border: none;
+border-radius: 40%;
+color: white;
+padding: 1em 2em;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
 justify-content: center;
 margin: 2em auto;
 display: block;

@@ -1,4 +1,5 @@
 <h1>todays recommendations</h1>
+
 {{#each users}}
 <section class='accounts'>
   <div>
@@ -16,13 +17,16 @@
   </div>
 
   <div>
-    <a href=''><img id="skipknop" src="images/skipknop.png"></a>
-    <a href=""><img id="likeknop" src="images/likeknop.png"></a>
+    <button class="skipButtonToggle"> <img id="skipknop" src="images/skipknop.png"></button>
+
     <form action="/likeuser" method="POST">
-      <button type="submit" name="userid" value={{_id}}>Like</button>
+      <button class="likebutton" type="submit" name="userid" value={{_id}}> <img id="likeknop" src="images/likeknop.png"
+          </button>
     </form>
   </div>
 
 </section>
 
 {{/each}}
+
+{{>navigation}}
