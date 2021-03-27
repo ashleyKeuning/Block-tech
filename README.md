@@ -12,8 +12,6 @@
   Every day you will receive between 5 and 10 recommendations of people based on your preferences and goals. You can either skip or like these people.
   When you like a person, the app will save the profile on a list that you can find in the dumbell icon at the top left of your screen. 
   So you can make contact with this person later on.
- ## About
- An app that helps you find the best training partner nearby
 
  ## feature list 
 
@@ -21,7 +19,7 @@
  - filter ✏️
  - saving profiles:white_check_mark:
  - chatting:speech_balloon:
- [link to the Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+
 
   ## Wireframe
  These are the most important interaction omn the app and feature
@@ -38,7 +36,7 @@
  ![interface 3](https://github.com/ashleyKeuning/Matching-App/blob/main/Images%20voor%20Wiki/interface%203.png)
  
   ## Wiki 
-  [Link to Wiki](https://github.com/ashleyKeuning/Matching-App/wiki)
+ See the [Wiki](https://github.com/ashleyKeuning/Matching-App/wiki) for more information about the app
 
 ## Installation
 
@@ -64,6 +62,24 @@
 
   you are now albe to use the app 
 
+## database
+
+create a database with:
+
+Database name is profielen
+
+Collection Name is profiel and likes
+
+and add [this Json](https://github.com/ashleyKeuning/Matching-App/blob/main/profielen.json) file to the database
+
+## .env 
+Create a .env in your matching-app dictionary via your text editor and paste the following code in the .env file
+``` bash
+mongodb+srv://ashley:<password>@cluster0.le4yq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority 
+```
+enter your password inside the <> and replace "myFirstDatabase with the database name "profielen"
+
+
   ## License
 
   [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
@@ -71,5 +87,7 @@
   ## Author
 
   The author of this app is [Ashley Keuning](https://github.com/ashleyKeuning) 
- [Apache-2.0 License](https://github.com/ashleyKeuning/Matching-App/blob/main/LICENSE) 
 
+
+## credits 
+Victor Boucher

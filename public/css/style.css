@@ -149,6 +149,11 @@ button.skipbutton>img:hover{
   height:100px;
 }
 
+section.accounts >div:nth-of-type(2)>p{
+margin:0.5em 2em;
+
+}
+
 
 section.accounts >div:nth-of-type(2)>p{
 margin:0.5em 2em;

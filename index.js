@@ -66,7 +66,7 @@ app.engine(
   exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts',
-  })
+  }),
 );
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -80,6 +80,10 @@ app.get('/recommendations', async (req, res) => {
   // de functie voor de like option
   const objectID = new ObjectID('6047593aa3d526e78d805086');
 
+  /*
+   *  dit is de object van de id in de mongo db, dit wordt gezet in een array
+   * wanneer je meerder profielen toevoegd
+   */
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
     /*
      * dit
@@ -88,6 +92,7 @@ app.get('/recommendations', async (req, res) => {
     if (err) {
       console.log(err); // als er een error dan showt het een error
     } else if (likesObject.likes) {
+
       /*
        * wanneer de gebruiker een profiel geliked
        *  wordt dan wordt die zelfde profiel van de pagina verwijdert
@@ -120,43 +125,7 @@ app.get('/recommendations', async (req, res) => {
     }
   });
 });
-
-/*
- * profielen deleten
- * app.post('/recommendations', async (req, res) => {
- *   const likedUser = new ObjectID(req.body.userid2); // is de button van de like button
- */
-
-/*
- *   await likesCollection.update(
- *     { _id: userid2 },
- *     {
- *       $pull: { likes: likedUser },
- *     },
- *     (error, data) => {
- *       if (error) {
- *         console.log(error);
- *       } else {
- *         console.log(userid2, req.body.userid2);
- *       }
- *     }
- *   );
- *   await likesCollection
- *     .findOne({ _id: userid2 })
- */
-
-/*
- * .then(user => {
- *   //Fill session with user data
- *   req.session.user = user
- * })
- */
-/*
- *     .catch((err) => console.log(err));
- *   res.redirect('/recommendations');
- * });
- * dit is de pagina voor saved profiles
- */
+// dit is de pagina voor saved profiles
 app.get('/savedprofiles', async (req, res) => {
   const objectID = new ObjectID('6047593aa3d526e78d805086');
   // object van de eerste id
@@ -197,12 +166,13 @@ app.post('/likeuser', async (req, res) => {
   const likedUser = new ObjectID(req.body.userid); // is de button van de like button
 
   await likesCollection.update(
+
     /*
      * het update de database, door de push, door het te pushen wordt er er een
      *  object in de array gezet in de likes profile
      */
     { _id: objectID },
-    { $addToSet: { likes: likedUser } } // push is om meer objecten in de array.
+    { $addToSet: { likes: likedUser } }, // push is om meer objecten in de array.
   );
 
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
