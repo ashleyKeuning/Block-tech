@@ -1,22 +1,22 @@
 <h1>Saved Profiles</h1>
 
 {{#each users}}
-<section class='profiel'>
-    <div>
+<div>
+    <section class='profiel'>
         <img src="" alt="">
         <h1>{{firstName}}</h1>
         <h2>{{lastName}}</h2>
         <p>{{age}} years</p>
         <p>{{location}} away</p>
         <a href="/chat"><button class=profiel>Start Chatting</button></a>
-    </div>
+        <form action="/savedprofiles" method="POST">
+            <button class="skipButton" type="submit" name="userid2" value={{_id}}> <img id="likeknop"
+                    src="images/skipknop.png" </button>
+        </form>
+    </section>
+</div>
 
-</section>
 
-<<<<<<< HEAD
 {{/each}}
 
 {{>navigation}}
-=======
-{{/each}}
->>>>>>> 816d176e36088a4aedcf2072d5848b009103eb74

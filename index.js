@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const { ObjectID } = require('mongodb');
+const multer = require('multer');
 
 /*
  * opbject id is de id van de database
@@ -140,14 +141,14 @@ app.get('/savedprofiles', async (req, res) => {
           if (err) {
             console.log(err);
           } else {
-            res.render('recommendations', {
+            res.render('userprofile', {
               title: 'opgeslagen accounts',
               users,
             });
           }
         });
     } else {
-      res.render('recommendations', {
+      res.render('userprofile', {
         title: 'opgeslagen accounts',
       });
     }
@@ -204,6 +205,31 @@ app.post('/likeuser', async (req, res) => {
         });
     }
   });
+});
+app.post('/savedprofiles', async (req, res) => {
+  const objectID = new ObjectID('6047593aa3d526e78d805086');
+  const likedUser = new ObjectID(req.body.userid2); // is de button van de like button
+
+  await likesCollection.update(
+    { _id: objectID },
+    {
+      $pull: { likes: likedUser },
+    },
+    (error, data) => {
+      if (error) {
+        console.log(error);
+      } else {
+        // console.log(objectID, likesObject.likes);
+      }
+    },
+  );
+  await likesCollection
+    .findOne({ _id: objectID })
+    .then((user) => {
+      // Fill session with user data
+    })
+    .catch((err) => console.log(err));
+  res.redirect('/savedprofiles');
 });
 
 // Error pagina

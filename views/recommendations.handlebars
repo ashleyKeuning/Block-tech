@@ -17,11 +17,9 @@
   </div>
 
   <div>
-    <button class="skipButtonToggle"> <img id="skipknop" src="images/skipknop.png"></button>
-
     <form action="/likeuser" method="POST">
-      <button class="likebutton" type="submit" name="userid" value={{_id}}> <img id="likeknop" src="images/likeknop.png"
-          </button>
+      <button class="likebutton" type="submit" name="userid" value={{_id}}> Save
+      </button>
     </form>
   </div>
 
@@ -30,3 +28,5 @@
 {{/each}}
 
 {{>navigation}}
+
+{{!-- <img id="likeknop" src="images/likeknop.png"> --}}

@@ -73,14 +73,14 @@ margin:1em;
 padding:1em 0em 0em 0em;
 }
 
-section .active2{
+/* section .active2{
   display:none;
   background-color: blue;
     border:none;
     background-color: whitesmoke;
     border-radius: 10%;
 
-}
+} */
 
 section.accounts>div>h1{
 color:black;
@@ -138,16 +138,6 @@ button.likebutton>img:hover{
   height:100px;
 }
 
-button.skipButtonToggle{margin:1.5em;
-  border:none;
-  background-color: whitesmoke;
-  border-radius: 50%;
-}
-
-button.skipbutton>img:hover{
-  width: 100px;
-  height:100px;
-}
 
 section.accounts >div:nth-of-type(2)>p{
 margin:0.5em 2em;
@@ -213,8 +203,24 @@ margin: auto;
 padding:0em 2em;
 border-radius: 40%;
 }
+section.profiel button.skipButton{
+  margin:1.5em;
+  border:none;
+  background-color:none;
+  border-radius: 100%;
+  float:right;
+  top:-24em;
+  left:2em;
+  display:block;
+  position:relative;
+  padding:0em;
 
+}
 
+section.profiel button.skipButton img{
+  width:50px;
+  height:50px;
+}
 button.profiel{ background-color:  #E86E61;
 border: none;
 border-radius: 10%;
