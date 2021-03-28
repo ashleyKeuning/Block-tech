@@ -20,7 +20,7 @@ const multer = require('multer');
 const app = express();
 const exphbs = require('express-handlebars');
 
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 // test voor database
 
@@ -251,7 +251,7 @@ app.use((req, res, next) => {
 });
 
 // Listen
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log('Express web app on localhost:5000');
 });
 
