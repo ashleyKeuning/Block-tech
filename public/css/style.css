@@ -105,6 +105,14 @@ margin:0em auto;
 justify-content: center;
 
 }
+
+section.accounts div img{
+  height:150px;
+  width:150px;
+  display:block;
+  justify-content: center;
+  margin:1em auto;}
+
 div.accounts{
   margin:2em 2em 1em 2em;
 }
@@ -133,9 +141,12 @@ button.likebutton{
   padding:0.8em 5em;
   color:white;
   font-size:15px;
-
 }
 
+#deleteknop{
+  height:30px;
+  width:30px;
+}
 button.likebutton>img:hover{
   width: 100px;
   height:100px;
@@ -153,6 +164,12 @@ margin:0.5em 2em;
 
 }
 
+section.profiel div img{
+  height:150px;
+  width:150px;
+  display:block;
+  justify-content: center;
+  margin:1em auto;}
 
 button.toggle{ color:black;
   /* background-color:rgb(68,66,106); */
@@ -208,16 +225,16 @@ section.profiel div{
 }
 
 section.profiel button.skipButton{
-  margin:1.5em;
-  border:none;
-  background-color:none;
+  /* margin:1.5em; */
+  border:#E86E61 solid 3px;
+  background-color: white;
   border-radius: 100%;
   float:right;
-  top:-30em;
-  left:5em;
+  top:-32em;
+  left:3.5em;
   display:block;
   position:relative;
-  padding:0em;
+  padding:1em 1em;
 }
 
 section.profiel button.skipButton img{

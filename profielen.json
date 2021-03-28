@@ -1,5 +1,6 @@
 [
     {
+        "image": "public/images/man1.png",
         "firstName": "Tom",
         "lastName": "de Haan ",
         "age": "34",
@@ -7,7 +8,7 @@
         "meerInformatie": "Haii, my name is Tom and I'm searching for a trainingspartner who is training to gain weight like me!. I train for 2 hours, 5 days a week. I mostly focus on the upper body, but never skips legday!!! "
     },
     {
-        "userImage": "/images/girl.jpg",
+        "image": "public/images/vrouw1.png",
         "firstName": "Anna",
         "lastName": "van den Oever",
         "age": "20",
@@ -15,6 +16,7 @@
         "meerInformatie": "Hi, I am Anna, im looking for someone who loves to go on a run with me, I'm currently training for the marathon, so I am looking for someone who wants to train with me!"
     },
     {
+        "image": "public/images/vrouw2.png",
         "firstName": "Loes",
         "lastName": "Visser",
         "age": "18",
@@ -22,6 +24,7 @@
         "meerInformatie": "I am Loes and a proffesional weight lifter, I am looking for someone who I can share my passion with, I train 6 days a week for 2 hours!"
     },
     {
+        "image": "public/images/man2.png",
         "firstName": "Dean",
         "lastName": "Schuurman",
         "age": "25",
@@ -29,6 +32,7 @@
         "meerInformatie": "I am Dean and I'm looking for someone who want to join me on my weight loss journey, so we can support each other,  I am trying to lose 20 Kg, I am aiming to train at least 5 days a week! "
     },
     {
+        "image": "public/images/man3.png",
         "firstName": "Hans",
         "lastName": "de Boer",
         "age": "20",

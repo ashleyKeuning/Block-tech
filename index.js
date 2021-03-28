@@ -27,6 +27,18 @@ const port = 3000;
 console.log(process.env.TESTVAR);
 // om de connectie met de database te testen
 
+// Multer setup
+const storage = multer.diskStorage({
+  destination(req, file, callback) {
+    callback(null, './public/images/');
+  },
+  filename(req, file, callback) {
+    callback(null, Date.now() + file.originalname);
+  },
+});
+
+const upload = multer({ storage }).single('image');
+
 let db = null;
 let likesCollection = null;
 let profileCollection = null;

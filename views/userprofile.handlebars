@@ -4,15 +4,15 @@
 
 <section class='profiel'>
     <div>
-        <img class='accounts' src="/images/girl.jpg" alt="">
+        <img class='accountfoto' src="{{image}}">
         <h1>{{firstName}}</h1>
         <h2>{{lastName}}</h2>
         <p>{{age}} years</p>
         <p>{{location}} away</p>
         <a href="/chat"><button class=profiel>Start Chatting</button></a>
         <form action="/savedprofiles" method="POST">
-            <button class="skipButton" type="submit" name="userid2" value={{_id}}> <img id="likeknop"
-                    src="images/skipknop.png" </button>
+            <button class="skipButton" type="submit" name="userid2" value={{_id}}> <img id="deleteknop"
+                    src="images/delete.png" </button>
         </form>
     </div>
 </section>
@@ -22,3 +22,8 @@
 {{/each}}
 
 {{>navigation}}
+
+
+{{!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixelmeetup" title="Pixelmeetup">Pixelmeetup</a> from
+    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+</div> --}}
