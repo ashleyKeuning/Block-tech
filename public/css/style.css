@@ -125,11 +125,14 @@ margin:0em auto 0.5em;
 }
 
 
-
-button.likebutton{margin:1.5em;
+button.likebutton{
+  background-color: #E86E61;
+  margin:1.5em;
   border:none;
-  background-color: whitesmoke;
-  border-radius: 50%;
+  border-radius: 7%;
+  padding:0.8em 5em;
+  color:white;
+  font-size:15px;
 
 }
 
@@ -151,18 +154,19 @@ margin:0.5em 2em;
 }
 
 
-button.toggle{ color:white;
-  background-color:rgb(68,66,106);
+button.toggle{ color:black;
+  /* background-color:rgb(68,66,106); */
 border: none;
 border-radius: 10%;
 padding: 0.5em 0.8em;
 text-align: center;
-text-decoration:none;
+text-decoration:underline;
 display: inline-block;
-font-size: 10px;
+font-size: 14px;
 justify-content: center;
-margin: 1em auto 0em;
+margin: 0em auto 0.8em;
 display: block;
+background-color:whitesmoke;
 }
 
 
@@ -188,8 +192,7 @@ margin:1em 1em 5em 1em;
 padding:1em 0em ;
 }
 
-section.profiel >div > h1,h2,p{
-color:black;
+section.profiel div h1,h2,p{
 color:black;
 padding:0em;
 display: block;
@@ -197,29 +200,29 @@ margin:0em;
 text-align: left;
 }
 
-section.profiel > div{
-display: block;
-margin: auto;
-padding:0em 2em;
-border-radius: 40%;
+section.profiel div{
+  display: block;
+  margin: auto;
+  padding:0em 2em;
+  border-radius: 20%;
 }
+
 section.profiel button.skipButton{
   margin:1.5em;
   border:none;
   background-color:none;
   border-radius: 100%;
   float:right;
-  top:-24em;
-  left:2em;
+  top:-30em;
+  left:5em;
   display:block;
   position:relative;
   padding:0em;
-
 }
 
 section.profiel button.skipButton img{
-  width:50px;
-  height:50px;
+  width:60px;
+  height:60px;
 }
 button.profiel{ background-color:  #E86E61;
 border: none;
@@ -237,7 +240,6 @@ text-decoration: none;}
 
 button.profiel:hover{
   font-size: 17px;
-
 }
 /* home pagina */
 section.home{
@@ -277,5 +279,10 @@ justify-content: center;
 margin: 2em auto;
 display: block;
 text-decoration: none;
+}
 
+h1.title{
+  display:block;
+  margin:1em auto;
+  text-align: center;
 }

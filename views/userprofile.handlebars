@@ -1,9 +1,10 @@
-<h1>Saved Profiles</h1>
+<h1 class="title">Saved Profiles</h1>
 
 {{#each users}}
-<div>
-    <section class='profiel'>
-        <img src="" alt="">
+
+<section class='profiel'>
+    <div>
+        <img class='accounts' src="/images/girl.jpg" alt="">
         <h1>{{firstName}}</h1>
         <h2>{{lastName}}</h2>
         <p>{{age}} years</p>
@@ -13,8 +14,9 @@
             <button class="skipButton" type="submit" name="userid2" value={{_id}}> <img id="likeknop"
                     src="images/skipknop.png" </button>
         </form>
-    </section>
-</div>
+    </div>
+</section>
+
 
 
 {{/each}}
