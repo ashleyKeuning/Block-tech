@@ -1,6 +1,6 @@
 [
     {
-        "image": "public/images/man1.png",
+        "image": "https://cdn.shopify.com/s/files/1/0185/2846/9056/products/ARRIVALSHORTSLEEVEGRAPHICT-SHIRTBLACK.A-Edit_CM_885x.jpg?v=1601992255",
         "firstName": "Tom",
         "lastName": "de Haan ",
         "age": "34",
@@ -8,7 +8,7 @@
         "meerInformatie": "Haii, my name is Tom and I'm searching for a trainingspartner who is training to gain weight like me!. I train for 2 hours, 5 days a week. I mostly focus on the upper body, but never skips legday!!! "
     },
     {
-        "image": "public/images/vrouw1.png",
+        "image": "https://cdn.shopify.com/s/files/1/0310/2988/7109/products/resizing-webimgs-24jun195_b5aebc34-89c0-40f4-a625-ef8efa00fda9_900x.jpg?v=1612361023",
         "firstName": "Anna",
         "lastName": "van den Oever",
         "age": "20",
@@ -16,7 +16,7 @@
         "meerInformatie": "Hi, I am Anna, im looking for someone who loves to go on a run with me, I'm currently training for the marathon, so I am looking for someone who wants to train with me!"
     },
     {
-        "image": "public/images/vrouw2.png",
+        "image": "https://cdn.shopify.com/s/files/1/0310/2988/7109/products/BeAybl13012113652_1200x1200_e038c58a-927e-443c-b51e-2c6116308b9e_900x.jpg?v=1612360022",
         "firstName": "Loes",
         "lastName": "Visser",
         "age": "18",
@@ -24,7 +24,7 @@
         "meerInformatie": "I am Loes and a proffesional weight lifter, I am looking for someone who I can share my passion with, I train 6 days a week for 2 hours!"
     },
     {
-        "image": "public/images/man2.png",
+        "image": "https://cdn.shopify.com/s/files/1/0185/2846/9056/products/RestorePulloverBlackGMPO4343.C-Edit_ZH_ZH_322e0be7-d837-49b1-a3d5-39bbb7ae9649_290x.jpg?v=1613992543",
         "firstName": "Dean",
         "lastName": "Schuurman",
         "age": "25",
@@ -32,11 +32,11 @@
         "meerInformatie": "I am Dean and I'm looking for someone who want to join me on my weight loss journey, so we can support each other,  I am trying to lose 20 Kg, I am aiming to train at least 5 days a week! "
     },
     {
-        "image": "public/images/man3.png",
-        "firstName": "Hans",
-        "lastName": "de Boer",
+        "image": "https://cdn.shopify.com/s/files/1/0185/2846/9056/products/CRESTSWEATZIPUPHOODIENAVY957.D1-Edit_ZH_ZH_290x.jpg?v=1614251956",
+        "firstName": "Jermaine",
+        "lastName": "de Jong",
         "age": "20",
         "location": "1 km",
-        "meerInformatie": "Hello, my name is Hans, I'm currently training to become a fitness aesthetic champignon, I'm trainin for 4 days a week. I'm looking for someone with the same interests and goals!"
+        "meerInformatie": "Hello, my name is Jermaine, I'm currently training to become a fitness aesthetic champignon, I'm trainin for 4 days a week. I'm looking for someone with the same interests and goals!"
     }
 ]
