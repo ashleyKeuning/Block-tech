@@ -79,7 +79,7 @@ app.engine(
   exphbs({
     defaultLayout: 'main',
     layoutsDir: 'views/layouts',
-  })
+  }),
 );
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -98,7 +98,6 @@ app.get('/recommendations', async (req, res) => {
    * wanneer je meerder profielen toevoegd
    */
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
-
     /*
      * dit
      * likes collection is een collection in de database, het zoek de id van de object id in de regel hierboven
@@ -106,6 +105,7 @@ app.get('/recommendations', async (req, res) => {
     if (err) {
       console.log(err); // als er een error dan showt het een error
     } else if (likesObject.likes) {
+
       /*
        * wanneer de gebruiker een profiel geliked
        *  wordt dan wordt die zelfde profiel van de pagina verwijdert
@@ -179,12 +179,13 @@ app.post('/likeuser', async (req, res) => {
   const likedUser = new ObjectID(req.body.userid); // is de button van de like button
 
   await likesCollection.update(
+
     /*
      * het update de database, door de push, door het te pushen wordt er er een
      *  object in de array gezet in de likes profile
      */
     { _id: objectID },
-    { $addToSet: { likes: likedUser } } // push is om meer objecten in de array.
+    { $addToSet: { likes: likedUser } }, // push is om meer objecten in de array.
   );
 
   likesCollection.findOne({ _id: objectID }, (err, likesObject) => {
@@ -233,7 +234,7 @@ app.post('/savedprofiles', async (req, res) => {
       } else {
         // console.log(objectID, likesObject.likes);
       }
-    }
+    },
   );
   await likesCollection
     .findOne({ _id: objectID })
